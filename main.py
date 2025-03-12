@@ -20,9 +20,9 @@ atoms_HeH = [Atom("He", [-1.,0.,0.]), Atom("H", [1.,0.,0.])]
 start_time = timer()
 
 num_electrons = sum([_.Z for _ in atoms_H2])
-OptimizeGeometry(atoms_H3, basis_set, num_electrons)    # num_electrons can also be set manually if the molecule is an ion
+OptimizeGeometry(atoms_H2, basis_set, num_electrons)    # num_electrons can also be set manually if the molecule is an ion
 print(f"optimized geometry:")
-for a in atoms_H3:
+for a in atoms_H2:
     print(a)
 
 print(f"total time elapsed: {timer()-start_time:.0f}s")
